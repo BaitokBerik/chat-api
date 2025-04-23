@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  …
+  <!-- 1) Конфиг Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui'] },
+          colors: {
+            chatGray: '#f2f3f5',
+            chatBg:   '#ffffff',
+            chatAccent: '#10a37f',
+            sidebarBg:  '#343541'
+          },
+          borderRadius: {
+            lg: '1rem',
+            xl: '1.5rem'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- 2) Сам Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  …
+</head>
+<body class="flex h-screen font-sans bg-chatBg text-black">
+
+  <!-- Левая панель -->
+  <aside class="w-[260px] bg-sidebarBg text-black p-4">
+    <div class="text-center mb-6">
+      <img src="assets/berik-avatar.png"
+           alt="Байтуков Берик Кайратович"
+           class="w-32 h-32 rounded-full mx-auto border-2 border-gray-600 shadow-md object-cover"/>
+      <h2 class="mt-2 font-semibold text-lg text-black">Байтуков Берик Кайратович</h2>
+      <p class="text-sm text-black mt-1">AI-аналитик, автоматизатор, системный архитектор</p>
+    </div>
+    <nav class="flex-1 overflow-auto space-y-1 text-sm">
+      <details class="group">
+        <summary class="px-3 py-2 rounded cursor-pointer hover:bg-[#343541]">О себе</summary>
+        <div class="pl-4 mt-1 text-black">
+          <p>Более 14 лет опыта в налоговой аналитике, бухгалтерии и IT. Внедряю AI, автоматизирую отчётность и интегрирую NLP/ChatGPT.</p>
+        </div>
+      </details>
+      <details class="group">
+        <summary class="px-3 py-2 rounded cursor-pointer hover:bg-[#343541]">Опыт работы</summary>
+        <div class="pl-4 mt-1 text-black space-y-2">
+          <p><strong>Налоговый аналитик</strong> (2011—настоящее время), Департамент госдоходов, Алматы:</p>
+          <ul class="list-disc list-inside ml-4">
+            <li>Руководство отделом администрирования МСБ;</li>
+            <li>Камеральный и выездной налоговый контроль;</li>
+            <li>Анализ рисков и бюджетирование;</li>
+          </ul>
+          <p><strong>Сетевой администратор</strong> (2007—2010), ТОО «Эконоя», Алматы:</p>
+          <ul class="list-disc list-inside ml-4">
+            <li>Настройка серверов, AD, сети;</li>
+            <li>Поддержка пользователей и 1С;</li>
+            <li>Автоматизация Bash/PowerShell;</li>
+          </ul>
+        </div>
+      </details>
+      <details class="group">
+        <summary class="px-3 py-2 rounded cursor-pointer hover:bg-[#343541]">Образование</summary>
+        <div class="pl-4 mt-1 text-black">
+          <ul class="list-disc list-inside">
+            <li>2012 — Бакалавр экономики и финансов, КазНАУ</li>
+            <li>2009 — Техник-экономист, Агроэкономический колледж</li>
+          </ul>
+          <p class="mt-2"><strong>ПК и курсы:</strong></p>
+          <ul class="list-disc list-inside ml-4">
+            <li>2020 — Основы ИБ, Udemy</li>
+            <li>2018 — Профбухгалтер и аудитор РК, АПБА</li>
+            <li>2018 — Аудитор РК, АПБА</li>
+          </ul>
+        </div>
+      </details>
+      <details class="group">
+        <summary class="px-3 py-2 rounded cursor-pointer hover:bg-[#343541]">Навыки</summary>
+        <div class="pl-4 mt-1 text-black flex flex-wrap gap-1">
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">Excel (Power Query)</span>
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">SQL (PostgreSQL)</span>
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">Power BI</span>
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">Python (pandas,numpy)</span>
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">Docker, Git</span>
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">AI/NLP, ChatGPT</span>
+          <span class="px-2 py-1 bg-indigo-800/20 rounded">AD, DNS, DHCP</span>
+        </div>
+      </details>
+      <details class="group">
+        <summary class="px-3 py-2 rounded cursor-pointer hover:bg-[#343541]">Проекты</summary>
+        <div class="pl-4 mt-1 text-black">
+          <ul class="list-disc list-inside">
+            <li>KaifTour GPT — чат-бот для туров</li>
+            <li>Анализ деклараций (НДС, ВЭД)</li>
+            <li>BI-дашборды для бюджетирования</li>
+          </ul>
+        </div>
+      </details>
+      <details class="group">
+        <summary class="px-3 py-2 rounded cursor-pointer hover:bg-[#343541]">Контакты</summary>
+        <div class="pl-4 mt-1 text-black space-y-1">
+          <p> +7 (700) 866-6024</p>
+          <p> baitokberik@yandex.kz</p>
+          <p> <a href="https://linkedin.com/in/berik-baitukov-29727819b"
+                  class="text-indigo-400 hover:underline" target="_blank">
+              linkedin.com/in/berik-baitukov-29727819b
+              </a>
+          </p>
+        </div>
+      </details>
+      <a href="assets/Berik_Baitukov_Resume.pdf" download
+         class="block mt-4 px-3 py-2 text-indigo-400 hover:bg-[#343541] rounded">
+        Скачать резюме
+      </a>
+    </nav>
+    <div class="text-xs text-center text-gray-500 mt-4">© 2025 baitokberik.kz</div>
+  </aside>
+
+  <!-- Центр: чат -->
+  <main class="flex flex-col flex-1 bg-chatBg">
+    <div id="chat" class="flex-1 overflow-y-auto p-6 space-y-4">
+
+  <!-- Пример бота -->
+  <div class="self-start bg-chatGray text-[#343541] rounded-lg px-6 py-4 max-w-[70%]">
+    Привет! Как я могу помочь?
+  </div>
+  <!-- Пример пользователя -->
+  <div class="self-end bg-chatAccent text-white rounded-lg px-6 py-4 max-w-[70%]">
+    Привет
+  </div>
+
+</div>
+
+<form id="chatInput" class="flex items-center p-4 border-t bg-chatBg">
+  <input id="userInput"
+         class="flex-1 px-4 py-2 bg-[#f7f7f8] border-none rounded-full focus:outline-none"
+         placeholder="Напишите сообщение…"/>
+  <button type="submit"
+          class="ml-2 px-4 py-2 bg-chatAccent text-white rounded-lg hover:bg-green-600">
+    Отправить
+  </button>
+</form>
+  </main>
+
+  <!-- Пустая правая панель -->
+  <aside class="hidden md:block w-[260px] bg-chatBg"></aside>
+
+  <script src="chat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

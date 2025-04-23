@@ -1,0 +1,11 @@
+// vercel.json
+{
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
+    { "src": "**/*.{html,js,css,png,jpg,jpeg,svg,gif}", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/chat.js" },
+    { "src": "/(.*)",     "dest": "/$1" }
+  ]
+}
